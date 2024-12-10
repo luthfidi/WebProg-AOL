@@ -4,41 +4,51 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use App\Models\Store;
+use App\Models\User;
 use Illuminate\Support\Str;
 
 class StoreSeeder extends Seeder
 {
+    /**
+     * Run the database seeds.
+     */
     public function run(): void
     {
-        $stores = [
+        // Predefined stores
+        $predefinedStores = [
             [
-                'store_name' => 'Central City Library',
-                'slug' => Str::slug('Central City Library'),
-                'details' => 'Main public library with extensive collection',
-                'user_id' => 1
+                'store_name' => 'Main Library Store',
+                'details' => 'Our primary library store with a wide collection of books and resources.'
             ],
             [
-                'store_name' => 'University Research Library',
-                'slug' => Str::slug('University Research Library'),
-                'details' => 'Specialized academic research library',
-                'user_id' => 1
+                'store_name' => 'Academic Resources Store',
+                'details' => 'Specialized store for academic and research materials.'
             ],
             [
-                'store_name' => 'City Community Library',
-                'slug' => Str::slug('City Community Library'),
-                'details' => 'Neighborhood library serving local community',
-                'user_id' => 1
-            ],
-            [
-                'store_name' => 'Digital Book Hub',
-                'slug' => Str::slug('Digital Book Hub'),
-                'details' => 'Online library with digital resources',
-                'user_id' => 1
+                'store_name' => 'Children\'s Library Store',
+                'details' => 'A dedicated store for children\'s books and educational resources.'
             ]
         ];
 
-        foreach ($stores as $storeData) {
-            Store::create($storeData);
+        // Get an admin or librarian user
+        $adminUser = User::where('role', '<=', 1)->first();
+
+        if (!$adminUser) {
+            // Create an admin user if none exists
+            $adminUser = User::factory()->state(['role' => 0])->create();
         }
+
+        // Create predefined stores
+        foreach ($predefinedStores as $storeData) {
+            Store::create([
+                'store_name' => $storeData['store_name'],
+                'details' => $storeData['details'],
+                'slug' => Str::slug($storeData['store_name']), // Explicitly create slug
+                'user_id' => $adminUser->id
+            ]);
+        }
+
+        // Create additional random stores
+        Store::factory(5)->create();
     }
 }

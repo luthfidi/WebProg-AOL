@@ -7,9 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class DefaultAttribute extends Model
 {
+    //
     use HasFactory;
-
     protected $fillable = [
         'attribute_value'
-    ];
+    ] ;
 }

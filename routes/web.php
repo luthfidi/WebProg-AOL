@@ -104,7 +104,8 @@ Route::middleware(['auth', 'verified', 'rolemanager:customer'])->group(function 
             Route::get('/dashboard', 'index')->name('dashboard');
             Route::get('/history', 'history')->name('history');
             Route::get('/payment', 'payment')->name('payment');
-
+            Route::get('/dashboard/{id}', 'show')->name('show.dashboard');
+            Route::post('/dashboard/rent-book/{id}', 'rentbook')->name('dashboard.rent');
         });
     });
 });

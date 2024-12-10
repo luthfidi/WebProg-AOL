@@ -12,14 +12,26 @@ class DefaultAttributeSeeder extends Seeder
      */
     public function run(): void
     {
+        // Predefined attributes
         $attributes = [
-            ['attribute_value' => 'Hardcover'],
-            ['attribute_value' => 'Paperback'],
-            ['attribute_value' => 'E-book'],
+            'New',
+            'Used',
+            'Rare',
+            'First Edition',
+            'Signed',
+            'Hardcover',
+            'Paperback',
+            'Limited Edition'
         ];
 
+        // Create predefined attributes
         foreach ($attributes as $attribute) {
-            DefaultAttribute::create($attribute);
+            DefaultAttribute::create([
+                'attribute_value' => $attribute
+            ]);
         }
+
+        // Optionally add some random attributes
+        DefaultAttribute::factory(5)->create();
     }
 }

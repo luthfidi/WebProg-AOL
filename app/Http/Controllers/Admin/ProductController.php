@@ -12,6 +12,6 @@ class ProductController extends Controller
         return view('admin.product.manage');
     }
     public function review_manage(){
-        return view('admin.product.review.manage');
+        return view('admin.product.manage_product_preview');
     }
 }
