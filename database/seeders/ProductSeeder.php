@@ -19,72 +19,7 @@ class ProductSeeder extends Seeder
         // Ensure we have some base data
         $this->ensureBaseData();
 
-        // Predefined book products
-        $predefinedProducts = [
-            [
-                'product_name' => 'Classic Literature Collection',
-                'description' => 'A curated collection of timeless literary masterpieces.',
-                'category' => 'Fiction',
-                'subcategory' => 'Novels',
-                'regular_price' => 5999,
-                'stock_quantity' => 50
-            ],
-            [
-                'product_name' => 'Modern Science Textbook Bundle',
-                'description' => 'Comprehensive science textbooks for advanced learners.',
-                'category' => 'Academic',
-                'subcategory' => 'Textbooks',
-                'regular_price' => 7999,
-                'stock_quantity' => 30
-            ],
-            [
-                'product_name' => 'Children\'s Illustrated Storybook Set',
-                'description' => 'Engaging and colorful storybooks for young readers.',
-                'category' => 'Children',
-                'subcategory' => 'Picture Books',
-                'regular_price' => 3999,
-                'stock_quantity' => 100
-            ]
-        ];
-
-        // Get an admin or librarian user
-        $librarian = User::where('role', '<=', 1)->first()
-            ?? User::factory()->state(['role' => 0])->create();
-
-        foreach ($predefinedProducts as $productData) {
-            // Find or create category and subcategory
-            $category = Category::firstOrCreate(['category_name' => $productData['category']]);
-            $subcategory = Subcategory::firstOrCreate([
-                'subcategory_name' => $productData['subcategory'],
-                'category_id' => $category->id
-            ]);
-
-            // Find or create a store
-            $store = Store::firstOrCreate([
-                'store_name' => 'Main Library Store',
-                'user_id' => $librarian->id,
-                'details' => 'Primary store for library products'
-            ]);
-
-            // Create the product
-            $product = Product::create([
-                'product_name' => $productData['product_name'],
-                'description' => $productData['description'],
-                'sku' => strtoupper(substr(md5(uniqid()), 0, 10)),
-                'librarian_id' => $librarian->id,
-                'category_id' => $category->id,
-                'subcategory_id' => $subcategory->id,
-                'store_id' => $store->id,
-                'regular_price' => $productData['regular_price'],
-                'stock_quantity' => $productData['stock_quantity'],
-                'stock_status' => $productData['stock_quantity'] > 0 ? 'In Stock' : 'Out of Stock',
-                'slug' => \Illuminate\Support\Str::slug($productData['product_name']),
-                'visibility' => true,
-                'status' => 'Published'
-            ]);
-        }
-
-        // Create additional random products
+        // Create random products
         Product::factory(10)->create();
     }
 

@@ -61,7 +61,7 @@ class ProductFactory extends Factory
     {
         return $this->afterCreating(function (Product $product) {
             // Create 3-6 images for each product
-            $imageCount = $this->faker->numberBetween(3, 6);
+            $imageCount = $this->faker->numberBetween(1, 1);
 
             ProductImage::factory($imageCount)
                 ->create([
