@@ -23,7 +23,7 @@ Route::get('/', function () {
 
 //Admin Routes
 Route::middleware(['auth', 'verified', 'rolemanager:admin'])->group(function () {
-    Route::prefix('admin')->group(function () {
+    Route::prefix(prefix: 'admin')->group(function () {
         Route::controller(AdminMainController::class)->group(function () {
             Route::get('/dashboard', 'index')->name('admin');
             Route::get('/settings', 'settings')->name('settings');
@@ -98,10 +98,12 @@ Route::middleware(['auth', 'verified', 'rolemanager:librarian'])->group(function
         });
     });
 });
+
 Route::middleware(['auth', 'verified', 'rolemanager:customer'])->group(function () {
     Route::prefix('customer')->group(function () {
         Route::controller(CustomerMainController::class)->group(function () {callback:
             Route::get('/dashboard', 'index')->name('dashboard');
+            Route::get('/dashboard/search', 'search')->name('search');
             Route::get('/history', 'history')->name('history');
             Route::get('/payment', 'payment')->name('payment');
             Route::get('/dashboard/{id}', 'show')->name('show.dashboard');

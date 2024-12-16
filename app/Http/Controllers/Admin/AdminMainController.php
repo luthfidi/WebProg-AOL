@@ -3,13 +3,15 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
 class AdminMainController extends Controller
 {
     //
     public function index(){
-        return view("admin.admin");
+        $products = Product::with('images')->paginate(6);
+        return view('admin.admin', compact('products'));
     }
     public function settings(){
         return view("admin.settings");
