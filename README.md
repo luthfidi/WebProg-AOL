@@ -1,66 +1,97 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# EasyLib
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## Project Description
 
-## About Laravel
+EasyLib is an innovative library management platform designed to revolutionize the way users interact with books. Our platform offers a seamless, user-friendly experience for both customers and librarians:
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Customer Experience
+- Easily browse and discover books
+- Convenient book rental process with home delivery
+- Smooth book return mechanism
+- Enjoy reading without the hassle of traditional library visits
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+### Librarian Features
+- Create and manage book stores
+- Add and list book products
+- Manage book inventory and rentals
+- Facilitate smooth book distribution and collection
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Admin Capabilities
+Administrators have comprehensive control over the platform:
+- Create and manage book categories
+- Develop and organize subcategories
+- Define and control product attributes
+- Design and implement discount strategies
+- Full product management
+- Monitor and analyze transaction history
+- Maintain platform-wide settings and configurations
 
-## Learning Laravel
+## Final Project TPM35 Kelompok 4
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+### Technology Stack
+- Laravel
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Setup and Installation
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. Clone the repository
+2. Create .env file from .env.example
+   ```bash
+   create .env from .env.example
+   ```
+3. Install dependencies
+   ```bash
+   composer install
+   ```
+4. Generate application key
+   ```bash
+   php artisan key:generate
+   ```
+5. Start the development server
+   ```bash
+   php artisan serve
+   ```
 
-## Laravel Sponsors
+### Database Setup
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+1. Reset and seed the database
+   ```bash
+   php artisan migrate:fresh
+   php artisan db:seed
+   ```
 
-### Premium Partners
+### Dummy Accounts
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+#### Admin Account
+- Emaul: admin@gmail.com
+- Password: password123
 
-## Contributing
+#### Librarian Account
+- Username: librarian@gmail.com
+- Password: password123
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+#### Librarian Account
+- Username: customer@gmail.com
+- Password: password123
 
-## Code of Conduct
+### Live Preview
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+[Visit EasyLib Website](https://easylib.vercel.app/)
 
-## Security Vulnerabilities
+## Contributors ✨
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<table>
+  <tbody>
+    <tr>
+        <td align="center" valign="top" width="14.28%"><a href="https://github.com/gustavohoze"><img src="https://avatars.githubusercontent.com/u/125367394?v=4?s=100" width="100px;" alt="Gustavo Hoze"/><br /><sub><b>Gustavo Hoze (FE & BE)</b></sub></a>
+        </td>
+        <td align="center" valign="top" width="14.28%"><a href="https://github.com/luthfidi"><img src="https://avatars.githubusercontent.com/u/125367395?v=4?s=100" width="100px;" alt="Luthfi Hadi"/><br /><sub><b>Luthfi Hadi (FE)</b></sub></a>
+        </td>
+        <td align="center" valign="top" width="14.28%"><a href="https://github.com/Jasonicholas"><img src="https://avatars.githubusercontent.com/u/125367396?v=4?s=100" width="100px;" alt="Jason Nicholas"/><br /><sub><b>Jason Nicholas (BE)</b></sub></a>
+        </td>
+        <td align="center" valign="top" width="14.28%"><a href="#"><img src="https://ui-avatars.com/api/?size=100&name=Wiwi+Oktriani" width="100px;" alt="Wiwi Oktriani"/><br /><sub><b>Wiwi Oktriani (UI/UX)</b></sub>
+        </td>
+        <td align="center" valign="top" width="14.28%"><a href="#"><img src="https://ui-avatars.com/api/?size=100&name=Yesica+Ferenlorensa" width="100px;" alt="Yesica Ferenlorensa"/><br /><sub><b>Yesica Ferenlorensa (UI/UX)</b></sub>
+        </td>
+    </tr>
+  </tbody>
+</table>
