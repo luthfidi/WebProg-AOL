@@ -30,7 +30,7 @@ Administrators have comprehensive control over the platform:
 -   Monitor and analyze transaction history
 -   Maintain platform-wide settings and configurations
 
-## Final Project TPM35 Kelompok 4
+## Web Programming - LD01 - Kelompok 4
 
 ### Technology Stack
 
@@ -80,8 +80,6 @@ Administrators have comprehensive control over the platform:
    php artisan serve
    ``` 
 
---- 
-
 ### Dummy Accounts
 
 #### Admin Account
@@ -95,8 +93,6 @@ Administrators have comprehensive control over the platform:
 #### Customer Account
 - Email: customer@gmail.com
 - Password: password123
-
----
 
 ### Live Preview
 
