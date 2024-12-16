@@ -9,14 +9,22 @@ use App\Models\User;
 use Auth;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\RentBookEmail;
+use Illuminate\Http\Request;
 
 class CustomerMainController extends Controller
 {
     //
     public function index(){
-        $products = Product::with('images')->get();
+        $products = Product::with('images')->paginate(6);
         return view('customer.profile', compact('products'));
     }
+
+    public function search(Request $request){
+        $search = $request->input('query');
+        $products = Product::where('product_name', 'like', "%$search%")->paginate(6);
+        return view('customer.profile', compact('products'));
+    }
+
     public function history(){
         $user = auth()->user();
         $transactions = $user->transactions()->with('book')->get();

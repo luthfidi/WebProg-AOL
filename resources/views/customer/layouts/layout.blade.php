@@ -123,16 +123,18 @@
                   </button>
                 </div>
                 <div class="header-search d-none d-md-flex">
-                  <form action="#">
-                    <input type="text" placeholder="Search..." />
-                    <button><i class="lni lni-search-alt"></i></button>
+                  <form action="{{ route('search') }}" method="get" class="search-form" >
+                    @csrf
+                    <input  type="text" name="query" placeholder="Search..." />
+                    <button type="submit" ><i class="lni lni-search-alt"></i></button>
                   </form>
                 </div>
               </div>
             </div>
             <div class="col-lg-7 col-md-7 col-6">
                 <div class="header-right">
-                    <form action="{{ route('logout') }}" method="POST" class="d-inline">
+                    <form
+                     class="d-inline">
                         @csrf
                         <button type="submit" style="background: transparent; color:red; border:none">Logout</button>
 
