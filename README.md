@@ -6,76 +6,76 @@ EasyLib is an innovative library management platform designed to revolutionize t
 
 ### Customer Experience
 
--   Easily browse and discover books
--   Convenient book rental process with home delivery
--   Smooth book return mechanism
--   Enjoy reading without the hassle of traditional library visits
+- Easily browse and discover books.
+- Convenient book rental process with home delivery.
+- Smooth book return mechanism.
+- Enjoy reading without the hassle of traditional library visits.
 
 ### Librarian Features
 
--   Create and manage book stores
--   Add and list book products
--   Manage book inventory and rentals
--   Facilitate smooth book distribution and collection
+- Create and manage book stores.
+- Add and list book products.
+- Manage book inventory and rentals.
+- Facilitate smooth book distribution and collection.
 
 ### Admin Capabilities
 
 Administrators have comprehensive control over the platform:
 
--   Create and manage book categories
--   Develop and organize subcategories
--   Define and control product attributes
--   Design and implement discount strategies
--   Full product management
--   Monitor and analyze transaction history
--   Maintain platform-wide settings and configurations
+- Create and manage book categories.
+- Develop and organize subcategories.
+- Define and control product attributes.
+- Design and implement discount strategies.
+- Full product management.
+- Monitor and analyze transaction history.
+- Maintain platform-wide settings and configurations.
 
 ## Web Programming - LD01 - Kelompok 4
 
 ### Technology Stack
 
--   Laravel
+- Laravel
 
 ### Setup and Installation
 
-1. Clone the repository:
+1. **Clone the repository:**
    ```bash
    git clone https://github.com/luthfidi/WebProg-AOL.git
    cd WebProg-AOL
    ```
 
-2. Create `.env` file:
+2. **Create `.env` file:**
    ```bash
    cp .env.example .env
    ```
 
-3. Install dependencies:
+3. **Install dependencies:**
    ```bash
    composer install
    npm install
    ```
 
-4. Build frontend assets:
+4. **Build frontend assets:**
    ```bash
    npm run build
    ```
 
-5. Generate application key:
+5. **Generate application key:**
    ```bash
    php artisan key:generate
    ```
 
-6. Optimize application:
+6. **Optimize application:**
    ```bash
    php artisan optimize
    ```
 
-7. Setup database:
+7. **Setup database:**
    ```bash
    php artisan migrate --seed
    ```
 
-8. Start the development server:
+8. **Start the development server:**
    ```bash
    php artisan serve
    ``` 
@@ -83,16 +83,16 @@ Administrators have comprehensive control over the platform:
 ### Dummy Accounts
 
 #### Admin Account
-- Email: admin@gmail.com
-- Password: password123
+- **Email:** admin@gmail.com
+- **Password:** password123
 
 #### Librarian Account
-- Email: librarian@gmail.com
-- Password: password123
+- **Email:** librarian@gmail.com
+- **Password:** password123
 
 #### Customer Account
-- Email: customer@gmail.com
-- Password: password123
+- **Email:** customer@gmail.com
+- **Password:** password123
 
 ### Live Preview
 
