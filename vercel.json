@@ -1,41 +1,41 @@
 {
-  "version": 2,
-  "functions": {
+    "version": 2,
+    "functions": {
       "api/index.php": {
-          "runtime": "vercel-php@0.6.0"
+        "runtime": "vercel-php@0.6.1"
       }
-  },
-  "routes": [
-    {
-      "src": "/admin_asset/css/(.*)",
-      "dest": "/public/admin_asset/css/"
-  },
-  {
-      "src": "/admin_asset/fonts/(.*)",
-      "dest": "/public/admin_asset/fonts/"
-  },
-  {
-      "src": "/admin_asset/images/(.*)",
-      "dest": "/public/admin_asset/images/"
-  },
-  {
-      "src": "/admin_asset/js/(.*)",
-      "dest": "/public/admin_asset/js/"
-  },
-  {
-      "src": "/admin_asset/scss/(.*)",
-      "dest": "/public/admin_asset/scss/"
-  },
-  {
-      "src": "/build/assets/(.*)",
-      "dest": "/public/build/assets/"
-  },
-  {
-      "src": "/(.*)",
-      "dest": "/api/index.php"
-  }
-  ],
-  "env": {
+    },
+    "routes": [
+      {
+        "src": "/admin_asset/css/(.*)",
+        "dest": "/public/admin_asset/css/$1"
+      },
+      {
+        "src": "/admin_asset/fonts/(.*)",
+        "dest": "/public/admin_asset/fonts/$1"
+      },
+      {
+        "src": "/admin_asset/images/(.*)",
+        "dest": "/public/admin_asset/images/$1"
+      },
+      {
+        "src": "/admin_asset/js/(.*)",
+        "dest": "/public/admin_asset/js/$1"
+      },
+      {
+        "src": "/admin_asset/scss/(.*)",
+        "dest": "/public/admin_asset/scss/$1"
+      },
+      {
+        "src": "/build/assets/(.*)",
+        "dest": "/public/build/assets/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/api/index.php"
+      }
+    ],
+    "env": {
       "APP_ENV": "production",
       "APP_DEBUG": "true",
       "APP_URL": "https://easylib.vercel.app",
@@ -48,6 +48,7 @@
       "CACHE_DRIVER": "array",
       "LOG_CHANNEL": "stderr",
       "SESSION_DRIVER": "cookie"
-  },
-  "outputDirectory": "public"
-}
+    },
+    "outputDirectory": "public"
+  }
+  
