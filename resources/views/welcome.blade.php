@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="{{ asset('admin_asset/scss/_sidebar.scss') }}" />
     <link rel="stylesheet" href="{{ asset('admin_asset/scss/_variables.scss') }}" />
     <link rel="stylesheet" href="{{ asset('admin_asset/scss/main.scss') }}" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKczx3M3Iht8tye6qv0b1lY2B3+g5pJ6Svh1P68h5xI2kZ4fi3WZhz2h7zldxl" crossorigin="anonymous">
+
     <style>
         :root {
             --custom-blue: #84C4E8;
@@ -167,5 +170,7 @@
     <script src="{{ asset('admin_asset/js/world-merc.js') }}"></script>
     <script src="{{ asset('admin_asset/js/polyfill.js') }}"></script>
     <script src="{{ asset('admin_asset/js/main.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-PPzCQHp7NT5z68Bdbn8M65VNL3ah2J4ZrckNxDAS8f2DZs5F5N+6lgrS+uRcg6nL" crossorigin="anonymous"></script>
+
 </body>
 </html>
